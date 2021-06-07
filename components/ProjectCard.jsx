@@ -14,7 +14,7 @@ const TheBody = styled(CardBody)({
 const ProjectCard = ({ title, logo, description, github }) => {
     return (
         <MyCard>
-            <CardImg top src={logo} width='100%'></CardImg>
+            <CardImg top src={logo} width='100%' height='100%'></CardImg>
             <TheBody>
                 <CardTitle tag="h5">{title}</CardTitle>
                 <CardText tag="h6">{description}</CardText>
