@@ -57,10 +57,10 @@ const MyNavbar = () => {
             </NavbarBrand>
             <Nav navbar>
                 <NavItem>
-                    <NavWords> About Me</NavWords>
+                    <NavWords href="/about"> About Me</NavWords>
                 </NavItem>
                 <NavItem>
-                    <NavWords> Work Experience </NavWords>
+                    <NavWords href="/experience"> Work Experience </NavWords>
                 </NavItem>
                 <NavItem>
                     <NavWords href="/projects"> Personal Projects </NavWords>
