@@ -5,18 +5,23 @@ import {
     NavItem,
     NavLink,
     NavbarBrand,
-    Nav
+    Nav,
+    Collapse
 } from 'reactstrap';
 
 const StyledNavbar = styled(Navbar)({
-    backgroundColor: '#ccb3ff',
+    // backgroundImage: 'linear-gradient(#e64d00, #901aff, #e64d00)',
+    backgroundImage: 'linear-gradient(#e67300, #b566ff, #ffa64d)',
     paddingTop: '0px',
     paddingBottom: '0px',
     paddingLeft: '40px',
     paddingRight: '0px',
     width: '12.625rem',
     height: '100vh',
-    display: 'block'
+    display: 'block',
+    '@media (max-width: 1355px)': {
+        display: 'none'
+    }
 });
 
 const Logo = styled.img({
@@ -49,7 +54,7 @@ const NavWords = styled(NavLink)({
     }
 });
 
-const MyNavbar = () => {
+const SideNavbar = () => {
     return (
         <StyledNavbar >
             <NavbarBrand href='/'>
@@ -73,6 +78,6 @@ const MyNavbar = () => {
     )
 };
 
-export default MyNavbar;
+export default SideNavbar;
 
 // Credit to https://codepen.io/konradwax/pen/woPNqJ
