@@ -1,8 +1,21 @@
 import '../styles/globals.css'
 import Head from 'next/head'
+import { useState } from 'react'
+import styled from '@emotion/styled'
 import 'bootstrap/dist/css/bootstrap.css'
-import MyNavbar from '../components/MyNavbar'
-import { Row, Container } from 'reactstrap'
+import SideNavbar from '../components/SideNavbar'
+import TopNavbar from '../components/TopNavbar'
+import { Row, Container, Collapse, Button } from 'reactstrap'
+
+const MyRow = styled(Row)({
+  marginRight: '0px',
+  marginLeft: '0px'
+});
+
+const MyContainer = styled(Container)({
+  marginRight: '0px',
+  marginLeft: '0px'
+});
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,13 +23,13 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>My Portfolio</title>
       </Head>
-      <Row>
-        <MyNavbar></MyNavbar>
-        <Container>
+      <TopNavbar></TopNavbar>
+      <MyRow>
+        <SideNavbar></SideNavbar>
+        <MyContainer>
           <Component {...pageProps} />
-        </Container>
-
-      </Row>
+        </MyContainer>
+      </MyRow>
     </>
   )
 }
