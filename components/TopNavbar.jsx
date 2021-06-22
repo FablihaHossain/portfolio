@@ -11,7 +11,7 @@ import {
 import styled from '@emotion/styled';
 
 const StyledNav = styled(Navbar)({
-    backgroundImage: 'linear-gradient(#b566ff, #e67300)',
+    backgroundImage: 'linear-gradient(0.25turn, #e67300, #b566ff)',
     '@media (min-width: 1355px)': {
         display: 'none'
     }
