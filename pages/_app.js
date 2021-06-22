@@ -13,11 +13,13 @@ const MyRow = styled(Row)({
 });
 
 const MyContainer = styled(Container)({
-  marginRight: '0px',
-  marginLeft: '0px'
+
 });
 
 function MyApp({ Component, pageProps }) {
+  const [sideNavOpen, setSideNavOpen] = useState(true);
+  const sideToggle = () => setSideNavOpen(!sideNavOpen);
+
   return (
     <>
       <Head>
@@ -25,9 +27,9 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <TopNavbar></TopNavbar>
       <MyRow>
-        <SideNavbar></SideNavbar>
+        <SideNavbar sideNavOpen={sideNavOpen} sideToggle={sideToggle}></SideNavbar>
         <MyContainer>
-          <Component {...pageProps} />
+          <Component {...pageProps} sideNavOpen={sideNavOpen} />
         </MyContainer>
       </MyRow>
     </>
