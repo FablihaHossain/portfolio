@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import {
     Navbar,
@@ -6,21 +6,30 @@ import {
     NavLink,
     NavbarBrand,
     Nav,
-    Collapse
+    Collapse,
+    Button
 } from 'reactstrap';
 
-const StyledNavbar = styled(Navbar)({
-    // backgroundImage: 'linear-gradient(#e64d00, #901aff, #e64d00)',
-    backgroundImage: 'linear-gradient(#e67300, #b566ff, #ffa64d)',
-    paddingTop: '0px',
-    paddingBottom: '0px',
-    paddingLeft: '40px',
-    paddingRight: '0px',
-    width: '12.625rem',
-    height: '100vh',
-    display: 'block',
-    '@media (max-width: 1355px)': {
-        display: 'none'
+const StyledNavbar = styled(Navbar)((props) => {
+    const { sidenavopen } = props;
+    return {
+        // backgroundImage: 'linear-gradient(#e64d00, #901aff, #e64d00)',
+        backgroundImage: 'linear-gradient(#e67300, #b566ff, #ffa64d)',
+        paddingTop: '0px',
+        paddingBottom: '0px',
+        paddingLeft: '40px',
+        paddingRight: '0px',
+        width: '12.625rem',
+        height: '734px',
+        display: 'inline-block',
+        '@media (max-width: 1384px)': {
+            display: 'none'
+        },
+        transition: sidenavopen ? 'all 0.5s ease-in' : '0.5s ease-in',
+        overflow: 'hidden',
+        marginLeft: '0',
+        position: 'sticky',
+        top: '0'
     }
 });
 
@@ -54,27 +63,52 @@ const NavWords = styled(NavLink)({
     }
 });
 
-const SideNavbar = () => {
+const NavButton = styled(Button)({
+    backgroundImage: 'linear-gradient(#e67300, #b566ff, #ffa64d) !important',
+    borderColor: 'transparent !important',
+    padding: '0.20rem 0.20rem',
+    '&:hover': {
+        backgroundColor: '#ffe6cc !important',
+        textDecoration: 'none',
+        borderColor: 'white !important'
+    },
+    '@media (max-width: 1384px)': {
+        display: 'none'
+    },
+    position: 'sticky',
+    top: '0',
+    height: '100vh'
+});
+
+const SideNavbar = ({ sideNavOpen, sideToggle }) => {
+    // const [sideNavOpen, setSideNavOpen] = useState(true);
+    // const sideToggle = () => setSideNavOpen(!sideNavOpen);
+
     return (
-        <StyledNavbar >
-            <NavbarBrand href='/'>
-                <Logo src="/Images/MyLogo.png"></Logo>
-            </NavbarBrand>
-            <Nav navbar>
-                <NavItem>
-                    <NavWords href="/about"> About Me</NavWords>
-                </NavItem>
-                <NavItem>
-                    <NavWords href="/experience"> Work Experience </NavWords>
-                </NavItem>
-                <NavItem>
-                    <NavWords href="/projects"> Personal Projects </NavWords>
-                </NavItem>
-                <NavItem>
-                    <NavWords href='/links'> Social Links </NavWords>
-                </NavItem>
-            </Nav>
-        </StyledNavbar>
+        <>
+            <Collapse isOpen={sideNavOpen}>
+                <StyledNavbar sidenavopen={sideNavOpen}>
+                    <NavbarBrand href='/'>
+                        <Logo src="/Images/MyLogo.png"></Logo>
+                    </NavbarBrand>
+                    <Nav navbar>
+                        <NavItem>
+                            <NavWords href="/about"> About Me</NavWords>
+                        </NavItem>
+                        <NavItem>
+                            <NavWords href="/experience"> Work Experience </NavWords>
+                        </NavItem>
+                        <NavItem>
+                            <NavWords href="/projects"> Personal Projects </NavWords>
+                        </NavItem>
+                        <NavItem>
+                            <NavWords href='/links'> Social Links </NavWords>
+                        </NavItem>
+                    </Nav>
+                </StyledNavbar>
+            </Collapse>
+            <NavButton onClick={sideToggle}> {sideNavOpen ? '<<' : '>>'} </NavButton>
+        </>
     )
 };
 
