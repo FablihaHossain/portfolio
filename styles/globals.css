@@ -6,8 +6,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   /* background-color:  #ff884d !important; */
   /* background-image: url('/Images/background3.jpg') !important; */
-  background-image: linear-gradient(#ce99ff, #ff7733) !important;
-  height: 100vh;
+  background-image: linear-gradient(0.25turn, #c180ff, #ff7733) !important;
+  height: auto
 }
 
 a {
