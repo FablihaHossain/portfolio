@@ -7,8 +7,10 @@ import {
     NavbarBrand,
     Nav,
     Collapse,
-    Button
+    Button,
+    Row
 } from 'reactstrap';
+import Links from './Links';
 
 const StyledNavbar = styled(Navbar)((props) => {
     const { sidenavopen } = props;
@@ -36,6 +38,10 @@ const StyledNavbar = styled(Navbar)((props) => {
 const Logo = styled.img({
     height: '150px',
     width: '150px',
+});
+
+const MainNav = styled(Nav)({
+    marginBottom: '100px'
 });
 
 const NavWords = styled(NavLink)({
@@ -81,9 +87,6 @@ const NavButton = styled(Button)({
 });
 
 const SideNavbar = ({ sideNavOpen, sideToggle }) => {
-    // const [sideNavOpen, setSideNavOpen] = useState(true);
-    // const sideToggle = () => setSideNavOpen(!sideNavOpen);
-
     return (
         <>
             <Collapse isOpen={sideNavOpen}>
@@ -91,7 +94,7 @@ const SideNavbar = ({ sideNavOpen, sideToggle }) => {
                     <NavbarBrand href='/'>
                         <Logo src="/Images/MyLogo.png"></Logo>
                     </NavbarBrand>
-                    <Nav navbar>
+                    <MainNav navbar>
                         <NavItem>
                             <NavWords href="/about"> About Me</NavWords>
                         </NavItem>
@@ -101,10 +104,11 @@ const SideNavbar = ({ sideNavOpen, sideToggle }) => {
                         <NavItem>
                             <NavWords href="/projects"> Personal Projects </NavWords>
                         </NavItem>
-                        <NavItem>
-                            <NavWords href='/links'> Social Links </NavWords>
-                        </NavItem>
-                    </Nav>
+                    </MainNav>
+                    <Links
+                        isRow={false}
+                        circleWidth='50%'
+                    ></Links>
                 </StyledNavbar>
             </Collapse>
             <NavButton onClick={sideToggle}> {sideNavOpen ? '<<' : '>>'} </NavButton>
