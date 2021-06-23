@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { Card, CardBody, CardTitle, CardText, CardImg, CardFooter } from 'reactstrap';
 
 const MyCard = styled(Card)((props) => {
     const { updatecard } = props;
     return {
-        height: updatecard ? '275px' : '375px',
-        width: updatecard ? '275px' : '375px',
+        height: updatecard ? '275px' : '350px',
+        width: updatecard ? '275px' : '350px',
         display: 'flex',
-        marginBottom: '170px !important'
+        marginBottom: '170px !important',
+        boxShadow: '5px 160px 44px #26004d, -5px -10px 44px #ff8080',
+        transition: '0.3s all ease-in-out',
+        '&:hover': {
+            marginTop: '-15px'
+        },
     }
 });
 
@@ -37,16 +42,6 @@ const TheFooter = styled(CardFooter)({
 })
 
 const ProjectCard = ({ title, logo, description, github, sidenavopen }) => {
-    const [changeCard, setChangeCard] = useState(sidenavopen)
-    // const changeCardToggle = () => setChangeCard(sidenavopen)
-
-    // console.log('sidenavopen', sidenavopen)
-    // useEffect(() => {
-    //     if (changeCard !== sidenavopen) {
-    //         setChangeCard(sidenavopen)
-    //     }
-    // }, [sidenavopen])
-    // console.log('changeCard', changeCard)
     return (
         <MyCard updatecard={sidenavopen}>
             <LogoImage top src={logo}></LogoImage>
@@ -62,3 +57,5 @@ const ProjectCard = ({ title, logo, description, github, sidenavopen }) => {
 };
 
 export default ProjectCard;
+
+// Credit to https://codepen.io/ngthuongdoan/pen/wvWvbbj
