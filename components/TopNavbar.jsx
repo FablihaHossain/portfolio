@@ -12,7 +12,7 @@ import styled from '@emotion/styled';
 
 const StyledNav = styled(Navbar)({
     backgroundImage: 'linear-gradient(0.25turn, #e67300, #b566ff)',
-    '@media (min-width: 1355px)': {
+    '@media (min-width: 1385px)': {
         display: 'none'
     }
 });
@@ -67,9 +67,6 @@ export default function TopNavbar() {
                         </NavItem>
                         <NavItem>
                             <NavWords href="/projects"> Personal Projects </NavWords>
-                        </NavItem>
-                        <NavItem>
-                            <NavWords href='/links'> Social Links </NavWords>
                         </NavItem>
                     </Nav>
                 </Collapse>
