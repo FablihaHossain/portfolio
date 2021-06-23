@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import SideNavbar from '../components/SideNavbar'
 import TopNavbar from '../components/TopNavbar'
 import { Row, Container, Collapse, Button } from 'reactstrap'
+import 'animate.css/animate.min.css'
+import 'animate-hover/css/animate-hover.css'
 
 const MyRow = styled(Row)({
   marginRight: '0px',
@@ -13,7 +15,6 @@ const MyRow = styled(Row)({
 });
 
 const MyContainer = styled(Container)({
-
 });
 
 function MyApp({ Component, pageProps }) {
