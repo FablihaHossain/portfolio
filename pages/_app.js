@@ -25,6 +25,10 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>My Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Mr+Dafoe&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" rel="stylesheet"></link>
       </Head>
       <TopNavbar></TopNavbar>
       <MyRow>
