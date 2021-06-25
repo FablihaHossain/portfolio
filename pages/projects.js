@@ -7,18 +7,25 @@ const ProjectDeck = styled(CardDeck)({
     '@media (min-width: 800px)': {
         display: 'grid',
         gridTemplateColumns: 'auto auto auto',
-        paddingTop: '80px',
+        paddingTop: '40px',
     },
     '@media (max-width: 799px)': {
         display: 'grid',
         gridTemplateColumns: 'auto',
-        paddingTop: '80px',
+        paddingTop: '40px',
     },
+});
+
+const Header = styled.p({
+    fontFamily: 'Bungee Inline, cursive',
+    fontSize: '50px',
+    textAlign: 'center'
 });
 
 export default function Projects({ sideNavOpen }) {
     return (
         <>
+            <Header> Personal Projects </Header>
             <ProjectDeck>
                 <ProjectCard
                     title="FAVEART For OnWords"
