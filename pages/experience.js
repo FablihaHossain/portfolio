@@ -21,19 +21,30 @@ export default function Experience() {
             <Header> Work Experience</Header>
             <Jumbo>
                 <ExperienceCard
-                    job={'Epistem Interactive'}
-                    details={'blah'}
-                    duration={'2020-present'}
+                    job='Epistem Interactive'
+                    details="Epistem Interactive is a tech company based in New York. It is a computer science learning
+                    platform for students interested in pursuing careers in technology. It utilizes AI driven tools to showcase a visual representation of
+                    code execution through the use of animations."
+                    myRole="I am currently a part of the engineering team that is working on the newest iteration of the company site"
+                    duration='2020-present'
+                    skills="ReactJS, Emotion CSS, AWS Amplify"
                 ></ExperienceCard>
                 <ExperienceCard
-                    job={'Adelphi University IT Help Desk'}
-                    details={'blah blah'}
-                    duration={'2018-2020'}
+                    job='Computer Science Teaching Assistant'
+                    details="The math and computer science department to assist professors and students in the ciriculum"
+                    myRole="The department offers three different roles, Lab Assistant, Tutor, and Grader. I was able to partake in all of them
+                    over the course of one and half years."
+                    duration='2018-2020'
+                    skills="Problem Solving, Leadership, Time Management"
                 ></ExperienceCard>
                 <ExperienceCard
-                    job={'Math and Computer Science Teaching Assistant'}
-                    details={'blah blah blah'}
-                    duration={'2018-2020'}
+                    job='Adelphi University IT Help Desk Assistant'
+                    details="Help Desk can be described as the first stop a person goes to that needs assistance.
+                    We would troubleshoot and determine how to go about resolving the issue."
+                    myRole="I was a help desk assistant and lab consultant. Both were crucial roles, where one would assist customers face to face while the 
+                    other consulted with them over the phone."
+                    duration='2018-2020'
+                    skills="Adaptability, Communication, Customer Service, Team Working"
                 ></ExperienceCard>
             </Jumbo>
         </>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { Button, Collapse, Card, CardBody, CardTitle, CardFooter, Row } from 'reactstrap';
 
@@ -16,17 +16,17 @@ const StyledCard = styled(Card)({
 
 const WorkTitle = styled(CardTitle)({
     textAlign: 'left',
-    fontSize: '20px',
+    fontSize: '23px',
     marginBottom: '0px',
     fontFamily: 'Newsreader, serif'
 });
 
 const StyledBody = styled(CardBody)({
-
+    paddingBottom: '0.50rem'
 });
 
 const Description = styled.p({
-    fontSize: '15px',
+    fontSize: '16px',
     padding: '0.50rem',
     fontFamily: 'Newsreader, serif'
 });
@@ -35,7 +35,7 @@ const StyledFooter = styled(CardFooter)({
     color: '#6c757d',
     padding: '0.75rem 1.25rem',
     backgroundColor: 'transparent',
-    textAlign: 'right'
+    textAlign: 'left'
 });
 
 const TheDurationText = styled.span({
@@ -44,16 +44,14 @@ const TheDurationText = styled.span({
 
 const Header = styled.div({
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    paddingLeft: '20px',
+    paddingRight: '20px'
 });
 
-export default function ExperienceCard({ job, details, duration }) {
-    const [open, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!open);
+export default function ExperienceCard({ job, details, myRole, duration, skills }) {
     return (
         <>
-            {/* <Button onClick={toggle}> {job} </Button>
-            <Collapse isOpen={open} > */}
             <StyledCard>
                 <WorkTitle>
                     <Header>
@@ -62,13 +60,16 @@ export default function ExperienceCard({ job, details, duration }) {
                     </Header>
                 </WorkTitle>
                 <StyledBody>
-                    <Description> {details}</Description>
+                    <Description>
+                        <i>Main Overview:</i> {details}
+                        <br></br><br></br>
+                        <i>My role:</i> {myRole}
+                    </Description>
                 </StyledBody>
                 <StyledFooter>
-                    {duration}
+                    Main Skills: {skills}
                 </StyledFooter>
             </StyledCard>
-            {/* </Collapse> */}
         </>
     )
 }
