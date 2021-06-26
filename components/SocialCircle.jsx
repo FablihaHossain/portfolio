@@ -9,10 +9,16 @@ const OuterDiv = styled.div((props) => {
     const { circleWidth } = props;
     return {
         marginBottom: '1rem !important',
-        width: circleWidth,
         position: 'relative',
         paddingRight: '15px',
-        paddingLeft: '15px'
+        paddingLeft: '15px',
+        display: 'inline-block',
+        '@media (min-width: 1200px)': {
+            width: circleWidth
+        },
+        '@media (max-width: 1199px)': {
+            width: '20% !important'
+        }
     }
 });
 
