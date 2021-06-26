@@ -4,15 +4,16 @@ import ProjectCard from '../components/ProjectCard'
 import { CardDeck } from 'reactstrap'
 
 const ProjectDeck = styled(CardDeck)({
-    '@media (min-width: 800px)': {
+    '@media (min-width: 1119px)': {
         display: 'grid',
         gridTemplateColumns: 'auto auto auto',
         paddingTop: '40px',
     },
-    '@media (max-width: 799px)': {
+    '@media (max-width: 1120px)': {
         display: 'grid',
         gridTemplateColumns: 'auto',
         paddingTop: '40px',
+        justifyContent: 'center'
     },
 });
 
@@ -31,7 +32,7 @@ export default function Projects({ sideNavOpen }) {
                     title="FAVEART For OnWords"
                     logo="/Images/FaveartLogo.png"
                     github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="My Senior Capstone"
+                    description="My Co-Developed Senior Capstone project that utilizes Augmented Reality"
                     sidenavopen={sideNavOpen}
                 ></ProjectCard>
 
@@ -39,7 +40,7 @@ export default function Projects({ sideNavOpen }) {
                     title="TahiyaClick"
                     logo=""
                     github="https://github.com/FablihaHossain/tahiya_click"
-                    description="A Photography site"
+                    description="A Photography Site inspired by my cousin"
                     sidenavopen={sideNavOpen}
                 ></ProjectCard>
 
@@ -47,133 +48,9 @@ export default function Projects({ sideNavOpen }) {
                     title="TravelBlog"
                     logo="/Images/TravelBlogLogo.png"
                     github="https://github.com/FablihaHossain/travel_blog"
-                    description="practice site"
+                    description="A Blog Site for Travel Enthusiasts"
                     sidenavopen={sideNavOpen}
                 ></ProjectCard>
-
-                {/* <ProjectCard
-                    title="FAVEART For OnWords"
-                    logo="/Images/FaveartLogo.png"
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="My Senior Capstone"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-                <ProjectCard
-                    title="TahiyaClick"
-                    logo=""
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="A Photography site"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-                <ProjectCard
-                    title="TravelBlog"
-                    logo="/Images/TravelBlogLogo.png"
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="practice site"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-                <ProjectCard
-                    title="FAVEART For OnWords"
-                    logo="/Images/FaveartLogo.png"
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="My Senior Capstone"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-                <ProjectCard
-                    title="TahiyaClick"
-                    logo=""
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="A Photography site"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-                <ProjectCard
-                    title="TravelBlog"
-                    logo="/Images/TravelBlogLogo.png"
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="practice site"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-                <ProjectCard
-                    title="FAVEART For OnWords"
-                    logo="/Images/FaveartLogo.png"
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="My Senior Capstone"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-                <ProjectCard
-                    title="TahiyaClick"
-                    logo=""
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="A Photography site"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-                <ProjectCard
-                    title="TravelBlog"
-                    logo="/Images/TravelBlogLogo.png"
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="practice site"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-
-                <ProjectCard
-                    title="FAVEART For OnWords"
-                    logo="/Images/FaveartLogo.png"
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="My Senior Capstone"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-                <ProjectCard
-                    title="TahiyaClick"
-                    logo=""
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="A Photography site"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-                <ProjectCard
-                    title="TravelBlog"
-                    logo="/Images/TravelBlogLogo.png"
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="practice site"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-
-                <ProjectCard
-                    title="FAVEART For OnWords"
-                    logo="/Images/FaveartLogo.png"
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="My Senior Capstone"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-                <ProjectCard
-                    title="TahiyaClick"
-                    logo=""
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="A Photography site"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard>
-
-                <ProjectCard
-                    title="TravelBlog"
-                    logo="/Images/TravelBlogLogo.png"
-                    github="https://github.com/FablihaHossain/FAVEART-For-OnWords"
-                    description="practice site"
-                    sidenavopen={sideNavOpen}
-                ></ProjectCard> */}
-
-
             </ProjectDeck>
         </>
     )
