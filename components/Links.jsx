@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import SocialCircle from './SocialCircle';
-import { Row } from 'reactstrap';
+import { Row, Container } from 'reactstrap';
 
 const SocialRow = styled(Row)((props) => {
     const { isRow } = props;
     return {
-        display: 'flex',
+        display: 'inline-flex',
         flexDirection: isRow ? 'row' : 'column',
-        flexWrap: 'unset'
+        flexWrap: 'unset',
+        justifyContent: 'center'
     }
 });
 

@@ -27,7 +27,7 @@ const StyledNavbar = styled(Navbar)((props) => {
         '@media (max-width: 1384px)': {
             display: 'none'
         },
-        transition: sidenavopen ? 'all 0.5s ease-in' : '0.5s ease-in',
+        transition: sidenavopen ? 'left 0.5s ease-in' : '0.5s ease-in',
         overflow: 'hidden',
         marginLeft: '0',
         position: 'sticky',
@@ -48,6 +48,8 @@ const NavWords = styled(NavLink)({
     color: 'black',
     transition: '0.5s',
     position: 'relative',
+    fontFamily: 'Newsreader, serif',
+    fontSize: '17px',
     '&:hover':
     {
         cursor: 'pointer',
@@ -72,6 +74,8 @@ const NavWords = styled(NavLink)({
 const NavButton = styled(Button)({
     backgroundImage: 'linear-gradient(#e67300, #b566ff, #ffa64d) !important',
     borderColor: 'transparent !important',
+    borderTopRightRadius: '20px 50%',
+    borderBottomRightRadius: '20px 50%',
     padding: '0.20rem 0.20rem',
     '&:hover': {
         backgroundColor: '#ffe6cc !important',

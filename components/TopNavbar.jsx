@@ -26,6 +26,8 @@ const NavWords = styled(NavLink)({
     color: 'black !important',
     transition: '0.5s',
     position: 'relative',
+    fontFamily: 'Newsreader, serif',
+    fontSize: '18px',
     '&:hover':
     {
         cursor: 'pointer',
