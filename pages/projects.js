@@ -9,7 +9,7 @@ const ProjectDeck = styled(CardDeck)({
         gridTemplateColumns: 'auto auto auto',
         paddingTop: '40px',
     },
-    '@media (max-width: 1120px)': {
+    '@media (max-width: 1000px)': {
         display: 'grid',
         gridTemplateColumns: 'auto',
         paddingTop: '40px',
@@ -38,7 +38,7 @@ export default function Projects({ sideNavOpen }) {
 
                 <ProjectCard
                     title="TahiyaClick"
-                    logo=""
+                    logo="/Images/tahiyaClickLogo.png"
                     github="https://github.com/FablihaHossain/tahiya_click"
                     description="A Photography Site inspired by my cousin"
                     sidenavopen={sideNavOpen}

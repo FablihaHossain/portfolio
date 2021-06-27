@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { Card, CardBody, CardTitle, CardText, CardImg, CardFooter } from 'reactstrap';
 
@@ -16,9 +16,9 @@ const MyCard = styled(Card)((props) => {
             boxShadow: '8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.10)',
             transition: 'all .4s ease',
         },
-        '@media (max-width: 1000px)': {
-            width: '400px',
-            height: '300px'
+        '@media (max-width: 700px)': {
+            width: '300px',
+            height: '200px'
         }
     }
 });
@@ -67,4 +67,4 @@ const ProjectCard = ({ title, logo, description, github, sidenavopen }) => {
 
 export default ProjectCard;
 
-// Credit to https://codepen.io/ngthuongdoan/pen/wvWvbbj
+// Credit to https://codepen.io/ngthuongdoan/pen/wvWvbbj for reference on the card bounce element
