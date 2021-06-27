@@ -1,22 +1,22 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import SocialCircle from './SocialCircle';
-import { Row, Container } from 'reactstrap';
+import { Row } from 'reactstrap';
 
 const SocialRow = styled(Row)((props) => {
-    const { isRow } = props;
+    const { isrow } = props;
     return {
         display: 'inline-flex',
-        flexDirection: isRow ? 'row' : 'column',
+        flexDirection: isrow ? 'row' : 'column',
         flexWrap: 'unset',
         justifyContent: 'center'
     }
 });
 
-export default function Links({ isRow, circleWidth }) {
+const Links = ({ isRow, circleWidth }) => {
     return (
         <>
-            <SocialRow isRow={isRow}>
+            <SocialRow isrow={isRow}>
                 <SocialCircle
                     logo="/Images/githubLogo.png"
                     link="https://www.github.com/fablihahossain"
@@ -44,3 +44,5 @@ export default function Links({ isRow, circleWidth }) {
         </>
     )
 }
+
+export default Links;

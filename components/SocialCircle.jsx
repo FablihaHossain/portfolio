@@ -3,8 +3,7 @@ import styled from '@emotion/styled';
 
 // Note: In order to reduce redundancy, some styles will be used from the animate.min.css and animate-hover.css 
 // classes from the npm animate-hover installation. I will only be used emotion components to modify a select few
-// elements
-
+// elements for the overall look
 const OuterDiv = styled.div((props) => {
     const { circleWidth } = props;
     return {
@@ -23,13 +22,13 @@ const OuterDiv = styled.div((props) => {
 });
 
 const TestDiv = styled.div({
-    borderColor: 'blue !important',
-    borderRightColor: 'pink !important',
+    borderColor: '#bb33ff !important',
+    borderRightColor: '#ffb3b3 !important',
     borderBottomColor: 'black !important',
     borderWidth: '5px !important'
 });
 
-export default function SocialCircle({ logo, link, circleWidth }) {
+const SocialCircle = ({ logo, link, circleWidth }) => {
     return (
         <OuterDiv circleWidth={circleWidth}>
             <a href={link}>
@@ -41,3 +40,5 @@ export default function SocialCircle({ logo, link, circleWidth }) {
         </OuterDiv>
     )
 }
+
+export default SocialCircle;
