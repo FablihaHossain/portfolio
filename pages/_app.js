@@ -1,11 +1,11 @@
-import '../styles/globals.css'
 import Head from 'next/head'
 import { useState } from 'react'
 import styled from '@emotion/styled'
-import 'bootstrap/dist/css/bootstrap.css'
 import SideNavbar from '../components/SideNavbar'
 import TopNavbar from '../components/TopNavbar'
-import { Row, Container, Collapse, Button } from 'reactstrap'
+import { Row, Container } from 'reactstrap'
+import '../styles/globals.css'
+import 'bootstrap/dist/css/bootstrap.css'
 import 'animate.css/animate.min.css'
 import 'animate-hover/css/animate-hover.css'
 
@@ -14,10 +14,8 @@ const MyRow = styled(Row)({
   marginLeft: '0px'
 });
 
-const MyContainer = styled(Container)({
-});
-
 function MyApp({ Component, pageProps }) {
+  // Side Navbar Variables
   const [sideNavOpen, setSideNavOpen] = useState(true);
   const sideToggle = () => setSideNavOpen(!sideNavOpen);
 
@@ -25,6 +23,8 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>My Portfolio</title>
+
+        {/* Google Fonts:  */}
         <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Mr+Dafoe&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"></link>
@@ -33,9 +33,9 @@ function MyApp({ Component, pageProps }) {
       <TopNavbar></TopNavbar>
       <MyRow>
         <SideNavbar sideNavOpen={sideNavOpen} sideToggle={sideToggle}></SideNavbar>
-        <MyContainer>
+        <Container>
           <Component {...pageProps} sideNavOpen={sideNavOpen} />
-        </MyContainer>
+        </Container>
       </MyRow>
     </>
   )
