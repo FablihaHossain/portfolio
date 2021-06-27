@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Button, Collapse, Card, CardBody, CardTitle, CardFooter, Row } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardFooter } from 'reactstrap';
 
 const StyledCard = styled(Card)({
     marginBottom: '20px',
@@ -49,7 +49,7 @@ const Header = styled.div({
     paddingRight: '20px'
 });
 
-export default function ExperienceCard({ job, details, myRole, duration, skills }) {
+const ExperienceCard = ({ job, details, myRole, duration, skills }) => {
     return (
         <>
             <StyledCard>
@@ -73,3 +73,5 @@ export default function ExperienceCard({ job, details, myRole, duration, skills 
         </>
     )
 }
+
+export default ExperienceCard;
