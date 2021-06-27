@@ -26,13 +26,15 @@ const SkillBlock = styled(ListGroupItem)({
     fontFamily: 'Newsreader, serif',
 });
 
-export default function SkillsList({ category, list }) {
+const SkillsList = ({ category, list }) => {
     return (
         <TheList horizontal>
             <CategoryBlock> {category}: </CategoryBlock>
-            {list.map(element => (
-                <SkillBlock> {element}</SkillBlock>
+            {list.map((element, key) => (
+                <SkillBlock key={key}> {element}</SkillBlock>
             ))}
         </TheList>
     )
 };
+
+export default SkillsList;
