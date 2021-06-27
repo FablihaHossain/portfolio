@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Row, Jumbotron } from 'reactstrap';
+import { Jumbotron } from 'reactstrap';
 import Links from '../components/Links';
 import SkillsList from '../components/SkillsList';
 
@@ -57,13 +57,11 @@ export default function About() {
         <>
             <MainHeader>
                 About Me
-                {/* <MyPic src="/Images/me1.PNG"></MyPic> */}
-                {/* <MyPic src="/Images/me3.JPG"></MyPic> */}
             </MainHeader>
             <DetailParagraph>
                 I pursued my undergraduate degree at Adelphi University for computer science. I'm currently seeking a career in Software Engineering. I have
-                experience in both Frontend and Backend. I work on personal projects to sharpen my skills as an overall developer. My other hobbies include: reading,
-                creative writing, and photography 😊
+                experience in both Frontend and Backend. I like to work on personal coding projects to sharpen my skills as an overall developer.
+                My other hobbies involve escaping reality through reading, creative writing, photography, and daydreaming ✨
             </DetailParagraph>
             <br></br>
             <Jumbo>
