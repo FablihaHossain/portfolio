@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import {
     Navbar,
@@ -15,7 +15,6 @@ import Links from './Links';
 const StyledNavbar = styled(Navbar)((props) => {
     const { sidenavopen } = props;
     return {
-        // backgroundImage: 'linear-gradient(#e64d00, #901aff, #e64d00)',
         backgroundImage: 'linear-gradient(#e67300, #b566ff, #ffa64d)',
         paddingTop: '0px',
         paddingBottom: '0px',
@@ -122,4 +121,4 @@ const SideNavbar = ({ sideNavOpen, sideToggle }) => {
 
 export default SideNavbar;
 
-// Credit to https://codepen.io/konradwax/pen/woPNqJ
+// Credit to https://codepen.io/konradwax/pen/woPNqJ for reference on the nav words hover animation

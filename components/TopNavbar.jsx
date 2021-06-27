@@ -49,7 +49,7 @@ const NavWords = styled(NavLink)({
     }
 });
 
-export default function TopNavbar() {
+const TopNavbar = () => {
     const [navOpen, setNavOpen] = useState(false);
     const toggleNav = () => setNavOpen(!navOpen);
     return (
@@ -76,3 +76,5 @@ export default function TopNavbar() {
         </div>
     )
 }
+
+export default TopNavbar;
